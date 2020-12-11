@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperatorio Segundo Parcial</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./ts-js/Personas.js"></script>
+    <script src="./ts-js/Cliente.js"></script>
+    <script src="./ts-js/Funciones.js"></script>
+</head>
+<body>
+    <!-- <input type="button" value="Alta" id="btnAbrir" class="btnAbrir">
+
+    <div class="contenedor" id="divContenedor" hidden> -->
+        <center>
+    
+            <h1>ABM PERSONAS</h1>
+        </center>
+        <hr>
+        <h3>Cargar nueva persona</h3>
+        <!-- <input type="button" value="X" id="btnCerrar" class="btnCerrar"/><br> -->
+        <label for="id">Id:</label> <br>
+        <input type="text" readonly id="idId" class="readonly" > <br>
+        <label for="nombre">Nombre:</label> <br>
+        <input type="text" name="" placeholder="Ingresa el nombre" class="inpuSinError" id="txtNombre"><br>
+        <label for="apellido">Apellido:</label> <br>
+        <input type="text" name="" placeholder="Ingresa el apellido" class="inpuSinError" id="txtApellido"><br>
+        <label for="edad">Edad:</label> <br>
+        <input type="text" name="" placeholder="Ingresa la edad" class="inpuSinError" id="txtEdad"><br>
+        
+        <label for="tipo">Sexo:</label> <br>
+        <select name="tipo" id="slcSexo" class="slc">
+            <option value="masculino" selected>Masculino</option>
+            <option value="femenino">Femenino</option> 
+        </select><br><br>
+        
+        <div class="btns">    
+            <input type="button" value="Guardar" id="btnGuardar" class="btnContenedor"/>
+            <input type="button" value="Eliminar" id="btnEliminar" class="btnEliminar"/>
+            <!--<input type="button" value="Limpiar datos" id="btnLimpiarDatos" class="btnContenedor"/>-->
+            <input type="button" value="Limpiar tabla" id="btnLimpiarTabla" class="btnEliminar"/>
+        </div>
+        <hr>
+    <!-- </div> -->
+    <center>
+    <h3>Filtros</h3>
+    <center>
+    <label for="filtro">Filtrar por sexo:</label>
+    <select name="filtro" id="slcFiltro" >
+        <option value="nada" selected>Sin filtro</option>
+        <option value="masculino" >Masculino</option>
+        <option value="femenino">Femenino</option> 
+    </select>
+        <label >Calcular promedio:</label>
+        <input type="text" name="" placeholder="-" id="promedio" class="promedio" readonly>
+        
+        <input type="button" value="Promediar" name="Promedio" id="btnPromedio" class="btnPromedio">    
+    <br>
+    <hr>
+    <h3>Campos Mostrados<h3>: 
+            <label>
+                <input type="checkbox" name="id" id="checkId" checked>
+                Id
+            </label>
+            <label>
+                <input type="checkbox" name="marca" id="checkNombre" checked>
+                Nombre
+            </label>
+            <label>
+                <input type="checkbox" name="modelo" id="checkApellido" checked>
+                Apellido
+            </label>
+            
+            <label>
+                <input type="checkbox" name="precio" id="checkEdad" checked>
+                Edad
+            </label>
+            <label>
+                <input type="checkbox" name="sexo" id="checkSexo" checked>
+                Sexo
+            </label>
+            
+    <hr>
+    <h2>Lista de Personas</h2>
+    <table id="tableAutos">
+        <thead>
+            <tr>
+                <!-- <th hidden=false id="tableId">id</th> -->
+                <!-- <th>id</th> -->
+                <th id="idTable">Id</th>
+                <th id="nombreTable">Nombre</th>
+                <th id="apellidoTable">Apellido</th>
+                <th id="edadTable">Edad</th>
+                <th id="sexoTable">Sexo</th>
+            </tr>
+        </thead>
+        <tbody id="tcuerpo"></tbody>
+    </table>
+</body>
+</html>
